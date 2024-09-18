@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "cfe93bd1-3ae5-4c64-9678-cfc82eb31737",
+		"name": "Product Oder Notification",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Order Notification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"orderDetail\" : {\n\t\t\"orderNumber\": \"12787128\",\n\t\t\"orderDate\": \"2020-06-12\",\n\t\t\"customerId\": \"884181\"\n\t},\n\t\"orderStatus\" : \"DISPATCHED\"\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/notify",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"notify"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
